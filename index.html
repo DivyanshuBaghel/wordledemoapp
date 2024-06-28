@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="titleContainer">
+    <h1>Wordle</h1>
+    <audio id="myAudio" src="song.mp3" autoplay muted></audio>
+    <button id="musicButton">🔈</button>
+    </div>
+    <div id="game-container">
+        <div class="row" id="row-0">
+            <div class="cell" data-row="0" data-col="0"></div>
+            <div class="cell" data-row="0" data-col="1"></div>
+            <div class="cell" data-row="0" data-col="2"></div>
+            <div class="cell" data-row="0" data-col="3"></div>
+            <div class="cell" data-row="0" data-col="4"></div>
+        </div>
+        <!-- Add more rows dynamically with JavaScript -->
+    </div>
+    <input type="text" id="word-input" maxlength="5">
+    <button id="submit-button">Submit</button>
+    <button id="reload-button">Try Again</button>
+
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>
