@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="titleContainer">
-    <h1>Wordle</h1>
+    <h1 id="musicButton" title="Play Music">Wordle</h1>
     <audio id="myAudio" src="https://myamazons3bucket4783.s3.ap-south-1.amazonaws.com/song.mp3" autoplay muted></audio>
-    <button id="musicButton">🔈</button>
+    <!-- <button onclick="showTip">💡</button>                 -->
     </div>
     <div id="game-container">
         <div class="row" id="row-0">
@@ -24,9 +24,9 @@
     </div>
     <div class="input-container">
         <input type="text" id="word-input" maxlength="5" placeholder="Type Your Guess..">
-        <button id="submit-button">Enter</button>
+        <button id="submit-button">Ok</button>
     </div>
-    <button id="reload-button">Try Again</button>
+    <button id="reload-button">Retry</button>
 
     <script type="module" src="script.js"></script>
     

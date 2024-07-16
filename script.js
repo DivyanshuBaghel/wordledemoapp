@@ -4,6 +4,14 @@ let musicStatus = false;
 
 const audio = document.getElementById("myAudio");
 
+function showTip() {                                    
+    alert("This is a Word guessing game. \n Tip: \n 1. A correct letter in the right position turns the box green. \n 2. A correct letter in the wrong position turns the box yellow. \n 3. A wrong letter turns the box grey. \n 4. You have 6 chances to guess the Word.");
+    musicButton.click()
+}  
+window.onload = function() {
+    showTip();
+};       
+
 musicButton.addEventListener('click', () => {
 
     if (musicStatus === false) 
@@ -12,10 +20,12 @@ musicButton.addEventListener('click', () => {
         audio.play();
         audio.muted = false;
         musicStatus=true;
-        audio.autoplay=true;
+        audio.autoplay=true;            
         audio.loop = true;
         console.log(musicStatus);
-        document.getElementById("musicButton").innerHTML="🔊";
+        // document.getElementById("musicButton").innerHTML="🔊";
+        document.getElementById("musicButton").classList.remove("musicpause");
+        document.getElementById("musicButton").classList.add("musicplay");
     }
 
     else{
@@ -23,7 +33,11 @@ musicButton.addEventListener('click', () => {
         audio.muted = true;
         musicStatus=false;
         console.log(musicStatus);
-        document.getElementById("musicButton").innerHTML="🔈";
+        // document.getElementById("musicButton").innerHTML="🔈";
+        document.getElementById("musicButton").classList.remove("musicplay");
+        document.getElementById("musicButton").classList.add("musicpause");
+
+
 
     }
 
